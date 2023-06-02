@@ -1,0 +1,52 @@
+{
+  "candidates": [
+    {
+      "nama": "Vergil Pranoto",
+      "id": 1,
+      "asal": "Jawa Tengah",
+      "pict": "src/assets/vergil-pranoto.jpg",
+      "suara": 8
+    },
+    {
+      "nama": "Pranoso Sudirman",
+      "id": 2,
+      "asal": "Bandung",
+      "pict": "src/assets/pranoso-sudirman.jpg",
+      "suara": 21
+    },
+    {
+      "nama": "Armstrong Baskar",
+      "id": 3,
+      "asal": "Jakarta Pusat",
+      "pict": "src/assets/armstrong-baskara.jpg",
+      "suara": 9
+    }
+  ],
+  "people": [
+    {
+      "nik": "3374042103050001",
+      "voted": false,
+      "id": 1
+    },
+    {
+      "nik": "p4punten p4punten",
+      "voted": false,
+      "id": 2
+    },
+    {
+      "nik": "Unit Layanan Terpadu BBPMP",
+      "voted": false,
+      "id": 3
+    },
+    {
+      "nik": "Rizky Anugrah Ananto",
+      "voted": false,
+      "id": 4
+    },
+    {
+      "nik": "rizkyk592@gmail.com",
+      "voted": false,
+      "id": 5
+    }
+  ]
+}
