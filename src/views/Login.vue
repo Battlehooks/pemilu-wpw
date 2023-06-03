@@ -57,22 +57,25 @@ export default {
         },
         async verification() {
             let inputAddr = 'http://localhost:3000/people/?nik=' + this.form.nik;
-            axios.get(inputAddr)
-            .then(res => {
+            try {
+                let res = await axios.get(inputAddr);
                 let tmp = res.data;
                 if(tmp.length <= 0) this.add();
                 else {
+                    if(tmp[0].voted === true) {
+                        alert('Anda sudah Voting!!!');
+                        this.form.nik = "";
+                        router.push('/');
+                        return
+                    }
                     cookies.set('nik', this.form.nik);
                     console.log(res);
                     router.push('/pemilihan');
                 }
-            }).catch(err => {
-                console.log(err);
-            });
-            return
-        },
-        dongok() {
-            router.push('/kuwontol')
+            }
+            catch(error) {
+                console.log(error);
+            }
         }
     }
 }

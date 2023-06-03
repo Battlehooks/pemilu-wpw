@@ -5,28 +5,28 @@
       "id": 1,
       "asal": "Jawa Tengah",
       "pict": "src/assets/vergil-pranoto.jpg",
-      "suara": 8
+      "suara": 10
     },
     {
       "nama": "Pranoso Sudirman",
       "id": 2,
       "asal": "Bandung",
       "pict": "src/assets/pranoso-sudirman.jpg",
-      "suara": 21
+      "suara": 24
     },
     {
       "nama": "Armstrong Baskar",
       "id": 3,
       "asal": "Jakarta Pusat",
       "pict": "src/assets/armstrong-baskara.jpg",
-      "suara": 9
+      "suara": 10
     }
   ],
   "people": [
     {
+      "id": 1,
       "nik": "3374042103050001",
-      "voted": false,
-      "id": 1
+      "voted": true
     },
     {
       "nik": "p4punten p4punten",
@@ -34,9 +34,9 @@
       "id": 2
     },
     {
+      "id": 3,
       "nik": "Unit Layanan Terpadu BBPMP",
-      "voted": false,
-      "id": 3
+      "voted": true
     },
     {
       "nik": "Rizky Anugrah Ananto",
@@ -47,6 +47,16 @@
       "nik": "rizkyk592@gmail.com",
       "voted": false,
       "id": 5
+    },
+    {
+      "id": 6,
+      "nik": "3374042103050002",
+      "voted": true
+    },
+    {
+      "id": 7,
+      "nik": "3374042103050003",
+      "voted": true
     }
   ]
 }

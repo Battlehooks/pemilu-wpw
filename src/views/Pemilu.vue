@@ -63,39 +63,38 @@ export default {
         async vote(candidate) {
             let addrPeople = 'http://localhost:3000/people/?nik=' + cookies.get('nik');
             let addrCandidate = 'http://localhost:3000/candidates/' + candidate.id;
-            axios.get(addrPeople).then(res => {
-                let tmp = res.data[0];
+            try {
+                let res = await axios.get(addrPeople);
+                let tmp = res.data;
                 this.person = {
-                    id: tmp.id,
-                    nik: tmp.nik,
-                    voted: true
+                    id: tmp[0].id,
+                    nik: tmp[0].nik,
+                    voted: true,
                 };
-            }).catch(err => {
-                console.log(err);
+            let addrPerson = 'http://localhost:3000/people/' + this.person.id;
+
+            await axios.put(addrPerson, {
+                id: this.person.id,
+                nik: this.person.nik,
+                voted: true
             });
 
-            let addrPerson = 'http://localhost:3000/people/' + this.person.id;
-            axios.put(addrPerson, this.person).then(res => {
-                console.log(res);
-            }).catch(err => {
-                console.log(err);
-            })
-
-            axios.put(addrCandidate, {
+            let candidateRes = await axios.put(addrCandidate, {
                 nama: candidate.nama,
                 id: candidate.id,
                 asal: candidate.asal,
                 pict: candidate.pict,
-                suara: candidate.suara + 1,
-            }).then(res => {
-                console.log(res);
-            }).catch(err => {
-                console.log(err)
+                suara: candidate.suara + 1
             });
 
-            cookies.remove('id');
+            console.log(res);
+            console.log(candidateRes);
+            cookies.remove('nik');
             router.push('/');
-        },
+        } catch(err) {
+            console.log(err)
+        }
     },
-};
+},
+}
 </script>
